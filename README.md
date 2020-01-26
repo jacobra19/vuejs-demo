@@ -1,4 +1,4 @@
-# cli-test
+# VUEJS DEMO
 
 ## Project setup
 ```
