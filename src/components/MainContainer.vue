@@ -34,7 +34,8 @@ export default {
     },
     created(){
         console.log(this.message)
-        this.getData()
+        // this.getData()
+        this.goToLocalServer()
     },
     mounted(){
 
@@ -62,6 +63,17 @@ export default {
                     this.errors.push(e)
                 })
         },
+
+        goToLocalServer: function () {
+            axios.get('http://localhost:3000/ping')
+                .then(response => {
+                // JSON responses are automatically parsed.
+                    console.log('response', response)
+                })
+                .catch((e) => {
+                    console.log(e)
+                })
+        }
     },
 
 }
